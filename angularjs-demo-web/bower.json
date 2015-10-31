@@ -1,0 +1,9 @@
+{
+  "name": "angularjs-demo",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "system.js": "~0.19.5",
+    "angular": "1.4.7"
+  }
+}

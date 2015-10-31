@@ -1,0 +1,26 @@
+default:
+  description: 'Welcome task'
+  tasks:
+    - 'info'
+typescript:
+  description: 'TypeScript code compilation'
+  tasks:
+    - 'ts:default'
+live-build:
+  description: 'Live compilation of all resources'
+  tasks:
+    - 'watch'
+compile:
+  description: 'Compile whole webapp'
+  tasks:
+    - 'clean'
+    - 'typescript'
+    - 'concat:vendor'
+    - 'copy'
+devmode:
+  description: 'Serve app in development mode'
+  tasks:
+    - 'compile'
+    - 'configureProxies:server'
+    - 'connect:server'
+    - 'live-build'
