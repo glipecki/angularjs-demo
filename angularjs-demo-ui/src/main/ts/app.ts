@@ -8,7 +8,6 @@ let module : angular.IModule = angular.module("app", [DemoModule.name]);
 
 module.run([DemoService.NAME, (demoService : DemoService) => {
   console.log("Application loaded...");
-  console.log("Service test: " + demoService.getHello());
 }]);
 
 export default module;
