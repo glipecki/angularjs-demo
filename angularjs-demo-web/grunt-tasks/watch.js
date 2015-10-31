@@ -5,11 +5,11 @@ module.exports = function (grunt, options) {
         spawn: false
       },
       files : [ 'src/main/ts/**/*.ts' ],
-			tasks: [ 'typescript', 'copy:typescriptSources', 'copy:typescriptCompiled' ]
+			tasks: [ 'typescript', 'newer:copy:typescriptSources', 'newer:copy:typescriptCompiled' ]
     },
     templatesHtml: {
       files : [ './src/main/templates/**/*.html' ],
-      tasks: [ 'copy:templatesHtml' ]
+      tasks: [ 'newer:copy:templatesHtml' ]
     }
   };
 };
