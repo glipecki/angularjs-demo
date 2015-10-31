@@ -6,10 +6,6 @@ typescript:
   description: 'TypeScript code compilation'
   tasks:
     - 'ts:default'
-live-build:
-  description: 'Live compilation of all resources'
-  tasks:
-    - 'watch'
 compile:
   description: 'Compile whole webapp'
   tasks:
@@ -24,4 +20,4 @@ devmode:
     - 'compile'
     - 'configureProxies:server'
     - 'connect:server'
-    - 'live-build'
+    - 'watch'
