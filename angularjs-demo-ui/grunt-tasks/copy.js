@@ -31,6 +31,16 @@ module.exports = function (grunt, options) {
           '**/*.html'
         ]
       }]
+    },
+    stylesheets: {
+      files: [{
+        expand: true,
+        cwd: './target/scss-compiled/',
+        dest: './target/webapp/styles',
+        src: [
+          '**/*.css'
+        ]
+      }]
     }
   };
 };

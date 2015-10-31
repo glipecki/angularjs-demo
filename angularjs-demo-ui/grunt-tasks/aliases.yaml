@@ -16,6 +16,7 @@ compile:
     - 'clean'
     - 'typescript'
     - 'concat:vendor'
+    - 'compass'
     - 'copy'
 devmode:
   description: 'Serve app in development mode'

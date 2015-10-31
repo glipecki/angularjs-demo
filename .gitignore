@@ -5,3 +5,4 @@ typings/
 .tscache/
 bower_components/
 .baseDir.ts
+*.tmp.txt
