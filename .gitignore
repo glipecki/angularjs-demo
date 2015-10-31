@@ -6,3 +6,4 @@ typings/
 bower_components/
 .baseDir.ts
 *.tmp.txt
+.sass-cache
