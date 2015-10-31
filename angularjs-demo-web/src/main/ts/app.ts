@@ -7,7 +7,7 @@ import DemoService from './demo/DemoService';
 let module:angular.IModule = angular.module('app', [DemoModule.name]);
 
 module.run([DemoService.NAME, (demoService:DemoService) => {
-  console.log('dupa2: ' + demoService.getHello());
+  console.log('demo service: ' + demoService.getHello());
 }]);
 
 export default module;

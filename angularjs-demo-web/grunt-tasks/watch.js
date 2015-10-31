@@ -2,10 +2,9 @@ module.exports = function (grunt, options) {
   return {
     typescript: {
       options: {
-        spawn: false,
-        cwd: './src/main/ts/'
+        spawn: false
       },
-      files : [ '**/*.ts' ],
+      files : [ 'src/main/ts/**/*.ts' ],
 			tasks: [ 'typescript', 'copy:typescriptSources', 'copy:typescriptCompiled' ]
     },
     templatesHtml: {
