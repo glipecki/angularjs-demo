@@ -9,15 +9,12 @@ typescript:
 quality:
   description: 'Project quality verification (*lints)'
   tasks:
-    - 'tslint'
-    - 'scsslint'
+    - 'concurrent:lints'
 compile:
   description: 'Compile whole webapp'
   tasks:
     - 'clean'
-    - 'typescript'
-    - 'concat:vendor'
-    - 'compass'
+    - 'concurrent:compile'
     - 'copy'
 devmode:
   description: 'Serve app in development mode'
