@@ -6,6 +6,11 @@ typescript:
   description: 'TypeScript code compilation'
   tasks:
     - 'ts:default'
+quality:
+  description: 'Project quality verification (*lints)'
+  tasks:
+    - 'tslint'
+    - 'scsslint'
 compile:
   description: 'Compile whole webapp'
   tasks:

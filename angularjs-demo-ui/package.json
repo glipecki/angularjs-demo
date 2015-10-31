@@ -12,13 +12,16 @@
     "grunt-contrib-copy": "^0.8.2",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-newer": "^1.1.1",
+    "grunt-scss-lint": "^0.3.8",
     "grunt-ts": "^5.1.0",
+    "grunt-tslint": "^2.5.0",
     "http-server": "^0.8.4",
     "jit-grunt": "^0.9.1",
     "load-grunt-config": "^0.17.2",
     "load-grunt-tasks": "^3.3.0",
     "time-grunt": "^1.2.2",
     "tsd": "^0.6.5",
+    "tslint": "^2.5.1",
     "typescript": "next"
   }
 }

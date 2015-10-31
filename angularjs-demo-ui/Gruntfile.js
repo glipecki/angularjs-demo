@@ -5,7 +5,8 @@ module.exports = function(grunt) {
     jitGrunt: {
       staticMappings: {
         typescript: 'grunt-ts',
-        configureProxies: 'grunt-connect-proxy'
+        configureProxies: 'grunt-connect-proxy',
+        scsslint: 'grunt-scss-lint'
       }
     }
   });

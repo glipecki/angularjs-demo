@@ -1,5 +1,7 @@
-@import "base";
+@import 'base';
+
+$bg-color: #869bff;
 
 body {
-  background-color: #869bff;
+  background-color: $bg-color;
 }
