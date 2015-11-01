@@ -4,7 +4,6 @@
   "dependencies": {},
   "devDependencies": {
     "system.js": "~0.19.5",
-    "angular": "1.4.7",
-    "angular-mocks": "~1.4.7"
+    "angular": "1.4.7"
   }
 }

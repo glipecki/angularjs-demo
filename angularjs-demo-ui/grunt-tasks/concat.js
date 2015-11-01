@@ -11,14 +11,6 @@ module.exports = function (grunt, options) {
           './bower_components/angular/angular.js'
          ],
 				dest: './target/webapp/vendor.js'
-			},
-      vendorTests: {
-				src: [
-          './bower_components/system.js/dist/system.js',
-          './bower_components/angular/angular.js',
-          './bower_components/angular-mocks/angular-mocks.js'
-         ],
-         dest: './target/tests/vendor-tests.js'
 			}
   };
 };

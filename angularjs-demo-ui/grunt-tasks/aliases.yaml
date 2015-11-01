@@ -10,22 +10,12 @@ quality:
   description: 'Project quality verification (*lints)'
   tasks:
     - 'concurrent:lints'
-test:
-  description: 'Runs project tests'
-  tasks:
-    - 'compile'
-    - 'copy:typescriptTestsCompiled'
-    - 'concat:vendorTests'
-    - 'karma'
 compile:
   description: 'Compile whole webapp'
   tasks:
     - 'clean'
     - 'concurrent:compile'
-    - 'copy:typescriptCompiled'
-    - 'copy:typescriptSources'
-    - 'copy:templatesHtml'
-    - 'copy:stylesheets'
+    - 'copy'
 devmode:
   description: 'Serve app in development mode'
   tasks:
