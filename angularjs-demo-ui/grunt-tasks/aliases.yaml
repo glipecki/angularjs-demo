@@ -15,7 +15,6 @@ test:
   tasks:
     - 'compile'
     - 'copy:typescriptTestsCompiled'
-    - 'copy:typescriptTestsSources'
     - 'concat:vendorTests'
     - 'karma'
 compile:
