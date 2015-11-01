@@ -1,4 +1,4 @@
-import * as angular from "angular";
+import "angular";
 import app from "./app";
 
 console.timeEnd("APP_BOOT_SYSTEMJS_TIME");

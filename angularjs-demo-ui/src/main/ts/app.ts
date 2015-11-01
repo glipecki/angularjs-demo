@@ -1,6 +1,4 @@
-///ts:ref=angular
-/// <reference path="../../../typings/angularjs/angular.d.ts"/> ///ts:ref:generated
-
+import "angular";
 import DemoModule from "./demo/DemoModule";
 import DemoService from "./demo/DemoService";
 
