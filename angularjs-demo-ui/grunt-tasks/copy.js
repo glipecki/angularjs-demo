@@ -35,6 +35,16 @@ module.exports = function (grunt, options) {
         ]
       }]
     },
+    typescriptTestsSources: {
+      files: [{
+        expand: true,
+        cwd: './src/main/ts/',
+        dest: './target/tests/',
+        src: [
+          '**/*.ts'
+        ]
+      }]
+    },
     templatesHtml: {
       files: [{
         expand: true,
