@@ -21,9 +21,15 @@
         "demo/DemoController.ts",
         "demo/DemoModule.ts",
         "demo/DemoService.ts",
+        "demo/DemoServiceTest.ts",
+        "systemjs-config.ts",
         "../../../typings/angular-ui-router/angular-ui-router.d.ts",
+        "../../../typings/angularjs/angular-mocks.d.ts",
         "../../../typings/angularjs/angular.d.ts",
-        "../../../typings/jquery/jquery.d.ts"
+        "../../../typings/jasmine/jasmine.d.ts",
+        "../../../typings/jquery/jquery.d.ts",
+        "../../../typings/systemjs/systemjs.d.ts",
+        "../../../typings/tsd.d.ts"
     ],
     "formatCodeOptions": {
         "indentSize": 4,

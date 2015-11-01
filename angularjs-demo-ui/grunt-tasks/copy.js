@@ -7,6 +7,7 @@ module.exports = function (grunt, options) {
         dest: './target/webapp/',
         src: [
           '!.baseDir.js',
+          '!*Test.js',
           '**/*.js',
           '**/*.js.map'
         ]
@@ -19,6 +20,18 @@ module.exports = function (grunt, options) {
         dest: './target/webapp/',
         src: [
           '**/*.ts'
+        ]
+      }]
+    },
+    typescriptTestsCompiled: {
+      files: [{
+        expand: true,
+        cwd: './target/ts-compiled/',
+        dest: './target/tests/',
+        src: [
+          '!.baseDir.js',
+          '**/*.js',
+          '**/*.js.map'
         ]
       }]
     },
