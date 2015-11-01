@@ -1,5 +1,7 @@
 ///ts:ref=jasmine
 /// <reference path="../../../../typings/jasmine/jasmine.d.ts"/> ///ts:ref:generated
+///ts:ref=angular-mocks
+/// <reference path="../../../../typings/angularjs/angular-mocks.d.ts"/> ///ts:ref:generated
 
 import "angular";
 import "angular-mocks";

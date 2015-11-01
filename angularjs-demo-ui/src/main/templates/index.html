@@ -15,6 +15,8 @@
 		<script src="//localhost:35729/livereload.js"></script>
 		<script type="text/javascript" src="libs/system.js"></script>
 		<script type="text/javascript" src="systemjs-config.js"></script>
+		<!-- Load all modules in one file instead of multiple HTTP requestes, bundle.js is removed for devmode! -->
+		<script type="text/javascript" src="bundle.js"></script>
 		<script type="text/javascript">
 			console.time("APP_BOOT_TIME");
 			console.time('APP_BOOT_SYSTEMJS_TIME');

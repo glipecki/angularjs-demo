@@ -2,27 +2,41 @@ default:
     description: 'Welcome task'
     tasks:
         - 'info'
+compile:
+    description: 'Compile application assets'
+    tasks:
+        - 'ts'
+        - 'compass'
+package:
+    description: 'Package all resources in webapp'
+    tasks:
+        - 'copy'
 quality:
     description: 'Project quality verification (*lints)'
     tasks:
         - 'tslint'
         - 'scsslint'
-compile:
-    description: 'Compile application assets'
-    tasks:
-        - 'clean'
-        - 'ts'
-        - 'compass'
-        - 'copy'
 test:
     description: 'App tests'
     tasks:
+        - 'karma:default'
+test-phantom:
+    description: 'App tests using PhantomJS browser'
+    tasks:
+        - 'karma:phantom'
+build:
+    description: 'Builds development version of app'
+    tasks:
+        - 'clean'
         - 'compile'
-        - 'karma'
+        - 'package'
+        - 'test-phantom'
+        - 'quality'
 devmode:
     description: 'Serve app in development mode'
     tasks:
-        - 'compile'
+        - 'package'
+        - 'replace:devmode'
         - 'configureProxies:server'
         - 'connect:server'
         - 'watch'

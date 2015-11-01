@@ -17,5 +17,18 @@ module.exports = function(grunt) {
     grunt.log.writeln('');
     grunt.log.writeln('Available tasks:');
     grunt.log.writeln('- info - Screen you are reading now. Default task.');
+    grunt.log.writeln('');
+    grunt.log.writeln('- clean - Cleans builded resources from previous builds.');
+    grunt.log.writeln('- compile - Compiles resources (typescript, scss, etc.).');
+    grunt.log.writeln('- package - Packages webapp with all resources.');
+    grunt.log.writeln('- build - [not-ready!] Builds develpoment version of app to deploy.');
+    grunt.log.writeln('- production - [not-ready!] Builds production version of app to deploy.');
+    grunt.log.writeln('');
+    grunt.log.writeln('- test - Runs application unit tests (using real browser - Chrome).');
+    grunt.log.writeln('- test-phantom - Runs application unit tests (using in memory browser - PhantomJS).');
+    grunt.log.writeln('- quality - Checks app quality validating via *lints.');
+    grunt.log.writeln('');
+    grunt.log.writeln('- devmode - Serves development version of app. Live reloades all changes.');
+    grunt.log.writeln('');
   });
 };

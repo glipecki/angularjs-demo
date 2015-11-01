@@ -1,7 +1,11 @@
 module.exports = function (grunt, options) {
   return {
-      single: {
-          configFile: './karma.conf.js'
+      default: {
+            configFile: './karma.conf.js'
+      },
+      phantom: {
+            configFile: './karma.conf.js',
+            browsers: [ "PhantomJS" ]
       }
   };
 };

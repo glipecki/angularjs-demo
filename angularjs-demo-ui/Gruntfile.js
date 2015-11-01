@@ -6,7 +6,9 @@ module.exports = function(grunt) {
       staticMappings: {
         typescript: 'grunt-ts',
         configureProxies: 'grunt-connect-proxy',
-        scsslint: 'grunt-scss-lint'
+        scsslint: 'grunt-scss-lint',
+        systemjs: 'grunt-systemjs-builder',
+        replace: 'grunt-text-replace'
       }
     }
   });

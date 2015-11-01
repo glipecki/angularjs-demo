@@ -2,15 +2,18 @@ module.exports = function(config) {
     config.set({
         autoWatch: false,
         singleRun: true,
-        logLevel: config.LOG_DEBUG,
+        logLevel: config.LOG_WARN,
         plugins: [
             "karma-chrome-launcher",
+            "karma-phantomjs-launcher",
             "karma-jasmine",
             "karma-systemjs",
-            "karma-sourcemap-loader"
+            "karma-sourcemap-loader",
+            "karma-mocha-reporter"
         ],
+        reporters: [ "mocha" ],
         frameworks: [ "systemjs", "jasmine" ],
-        browsers: [ "Chrome" ],
+        browsers: [ /* "PhantomJS" */ "Chrome" ],
         client: {
             captureConsole: true
         },
@@ -33,6 +36,7 @@ module.exports = function(config) {
                     "systemjs": "bower_components/system.js/dist/system.js",
                     "system-polyfills": "bower_components/system.js/dist/system-polyfills.js",
                     "es6-module-loader": "node_modules/es6-module-loader/dist/es6-module-loader.js",
+                    "phantomjs-polyfill": "node_modules/phantomjs-polyfill/bind-polyfill.js",
                     "libs/angular.js": "target/webapp/libs/angular.js",
                     "angular-mocks": "node_modules/angular-mocks/angular-mocks.js"
                 }
