@@ -1,36 +1,40 @@
 default:
-  description: 'Welcome task'
-  tasks:
-    - 'info'
+    description: 'Welcome task'
+    tasks:
+        - 'info'
 quality:
-  description: 'Project quality verification (*lints)'
-  tasks:
-    - 'tslint'
-    - 'scsslint'
+    description: 'Project quality verification (*lints)'
+    tasks:
+        - 'tslint'
+        - 'scsslint'
 compile:
-  description: 'Compile application assets'
-  tasks:
-    - 'clean'
-    - 'ts'
-    # - 'concat'
-    - 'compass'
-    - 'copy'
+    description: 'Compile application assets'
+    tasks:
+        - 'clean'
+        - 'ts'
+        - 'compass'
+        - 'copy'
+test:
+    description: 'App tests'
+    tasks:
+        - 'compile'
+        - 'karma'
 devmode:
-  description: 'Serve app in development mode'
-  tasks:
-    - 'compile'
-    - 'configureProxies:server'
-    - 'connect:server'
-    - 'watch'
+    description: 'Serve app in development mode'
+    tasks:
+        - 'compile'
+        - 'configureProxies:server'
+        - 'connect:server'
+        - 'watch'
 watch-after–typescript:
-  tasks:
-    - 'ts'
-    - 'newer:copy:typescriptSources'
-    - 'newer:copy:typescriptCompiled'
+    tasks:
+        - 'ts'
+        - 'newer:copy:typescriptSources'
+        - 'newer:copy:typescriptCompiled'
 watch-after–templates:
-  tasks:
-    - 'newer:copy:templatesHtml'
+    tasks:
+        - 'newer:copy:templatesHtml'
 watch-after–stylesheets:
-  tasks:
-    - 'compass'
-    - 'newer:copy:stylesheets'
+    tasks:
+        - 'compass'
+        - 'newer:copy:stylesheets'

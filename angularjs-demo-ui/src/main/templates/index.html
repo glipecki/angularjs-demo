@@ -16,6 +16,8 @@
 		<script type="text/javascript" src="libs/system.js"></script>
 		<script type="text/javascript" src="systemjs-config.js"></script>
 		<script type="text/javascript">
+			console.time("APP_BOOT_TIME");
+			console.time('APP_BOOT_SYSTEMJS_TIME');
 			System.import('index');
 		</script>
 	</body>

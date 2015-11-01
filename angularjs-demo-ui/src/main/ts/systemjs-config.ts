@@ -1,3 +1,6 @@
+///ts:ref=systemjs
+/// <reference path="../../../typings/systemjs/systemjs.d.ts"/> ///ts:ref:generated
+
 System.config({
   defaultJSExtensions: true,
   map: {
@@ -8,5 +11,5 @@ System.config({
       // default module export configuration: https://github.com/systemjs/systemjs/blob/master/docs/module-formats.md#shim-dependencies
       exports: "angular"
     }
-  },
+  }
 });
