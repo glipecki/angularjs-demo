@@ -32,6 +32,7 @@ build:
         - 'package'
         - 'test-phantom'
         - 'quality'
+        - 'systemjs'
 devmode:
     description: 'Serve app in development mode'
     tasks:
