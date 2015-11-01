@@ -2,19 +2,18 @@ default:
   description: 'Welcome task'
   tasks:
     - 'info'
-typescript:
-  description: 'TypeScript code compilation'
-  tasks:
-    - 'ts:default'
 quality:
   description: 'Project quality verification (*lints)'
   tasks:
-    - 'concurrent:lints'
+    - 'tslint'
+    - 'scsslint'
 compile:
-  description: 'Compile whole webapp'
+  description: 'Compile application assets'
   tasks:
     - 'clean'
-    - 'concurrent:compile'
+    - 'ts'
+    # - 'concat'
+    - 'compass'
     - 'copy'
 devmode:
   description: 'Serve app in development mode'
@@ -23,3 +22,15 @@ devmode:
     - 'configureProxies:server'
     - 'connect:server'
     - 'watch'
+watch-after–typescript:
+  tasks:
+    - 'ts'
+    - 'newer:copy:typescriptSources'
+    - 'newer:copy:typescriptCompiled'
+watch-after–templates:
+  tasks:
+    - 'newer:copy:templatesHtml'
+watch-after–stylesheets:
+  tasks:
+    - 'compass'
+    - 'newer:copy:stylesheets'

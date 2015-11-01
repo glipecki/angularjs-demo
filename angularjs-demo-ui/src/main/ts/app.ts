@@ -7,7 +7,7 @@ import DemoService from "./demo/DemoService";
 let module : angular.IModule = angular.module("app", [DemoModule.name]);
 
 module.run([DemoService.NAME, (demoService : DemoService) => {
-  console.log("Application loaded...");
+  console.info("Application loaded...");
 }]);
 
 export default module;

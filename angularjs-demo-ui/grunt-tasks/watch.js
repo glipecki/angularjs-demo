@@ -6,15 +6,15 @@ module.exports = function (grunt, options) {
     },
     typescript: {
       files: [ 'src/main/ts/**/*.ts' ],
-			tasks: [ 'typescript', 'newer:copy:typescriptSources', 'newer:copy:typescriptCompiled' ]
+			tasks: [ 'watch-after–typescript' ]
     },
     templatesHtml: {
       files: [ './src/main/templates/**/*.html' ],
-      tasks: [ 'newer:copy:templatesHtml' ]
+      tasks: [ 'watch-after–templates' ]
     },
     stylesheets: {
       files: [ './src/main/scss/**/*.scss' ],
-      tasks: [ 'compass', 'newer:copy:stylesheets' ]
+      tasks: [ 'watch-after–stylesheets' ]
     }
   };
 };

@@ -1,5 +1,16 @@
 module.exports = function (grunt, options) {
   return {
+    libs: {
+      files: [{
+        expand: true,
+        dest: './target/webapp/libs/',
+        flatten: true,
+        src: [
+          'bower_components/angular/angular.js',
+          'bower_components/system.js/dist/system.js'
+        ]
+      }]
+    },
     typescriptCompiled: {
       files: [{
         expand: true,
