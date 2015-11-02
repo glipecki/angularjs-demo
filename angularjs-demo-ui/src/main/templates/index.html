@@ -19,8 +19,8 @@
 		<script type="text/javascript" src="bundle.js"></script>
 		<script type="text/javascript">
 			console.time("APP_BOOT_TIME");
-			console.time('APP_BOOT_SYSTEMJS_TIME');
-			System.import('index');
+			console.time("APP_BOOT_LOADING_TIME");
+			System.import("index").catch(console.error.bind(console));
 		</script>
 	</body>
 </html>

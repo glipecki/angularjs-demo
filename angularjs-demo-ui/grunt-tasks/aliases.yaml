@@ -36,6 +36,8 @@ build:
 devmode:
     description: 'Serve app in development mode'
     tasks:
+        - 'clean'
+        - 'compile'
         - 'package'
         - 'replace:devmode'
         - 'configureProxies:server'
@@ -49,6 +51,7 @@ watch-after–typescript:
 watch-after–templates:
     tasks:
         - 'newer:copy:templatesHtml'
+        - 'replace:devmode'
 watch-after–stylesheets:
     tasks:
         - 'compass'
