@@ -20,3 +20,4 @@ PS> node ./node_modules/tsd/build/cli.js
 
 - cleaning in task aliases
 - functional tests
+- logging
