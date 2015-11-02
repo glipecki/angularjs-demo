@@ -9,13 +9,19 @@
 		<link type="text/css" rel="stylesheet" href="styles/application.css" />
 	</head>
 	<body ng-cloak>
+		<!-- App UI -->
 		<menu></menu>
-		<demo-span name="Grzegorz"></demo-span>
+		<div ui-view></div>
+
+		<!-- App dependencies -->
 		<script src="//localhost:35729/livereload.js"></script>
 		<script type="text/javascript" src="libs/system.js"></script>
 		<script type="text/javascript" src="systemjs-config.js"></script>
+
 		<!-- Load all modules in one file instead of multiple HTTP requestes, bundle.js is removed for devmode! -->
 		<script type="text/javascript" src="bundle.js"></script>
+
+		<!-- App bootstrap -->
 		<script type="text/javascript">
 			console.time("APP_BOOT_TIME");
 			console.time("APP_BOOT_LOADING_TIME");

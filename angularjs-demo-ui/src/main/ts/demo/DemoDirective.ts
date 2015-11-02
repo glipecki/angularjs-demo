@@ -1,24 +1,24 @@
-import "angular";
+import BaseDirective from "../utils/BaseDirective";
 
-export default class DemoDirective implements angular.IDirective {
-    static NAME = "demoSpan";
+export default class DemoDirective extends BaseDirective {
 
-    restrict = "E";
-    scope = true;
-    controller : string;
-    controllerAs = "vm";
+    static NAME = "demoMessageBox";
 
     bindToController = {
-        name: "@"
+        user: "="
     };
     template = `
-        <span>{{ vm.getMessage(vm.name) }}</span>
+        <div>
+            <div>You've got mail!</div>
+            <div>Message: "{{ vm.getMessage(vm.user.username) }}"</div>
+        </div>
     `;
 
-    /** Value from Scope */
-    name:string;
+    /** Value binded from from Scope */
+    name : string;
 
-    constructor(controller : string) {
-        this.controller = controller;
+    constructor(controllerName : string) {
+        super(controllerName);
     }
+
 }

@@ -3,53 +3,54 @@ module.exports = function (grunt, options) {
     libs: {
       files: [{
         expand: true,
-        dest: './target/webapp/libs/',
+        dest: "./target/webapp/libs/",
         flatten: true,
         src: [
-          'bower_components/angular/angular.js',
-          'bower_components/system.js/dist/system.js'
+          "bower_components/angular/angular.js",
+          "bower_components/system.js/dist/system.js",
+          "bower_components/angular-ui-router/release/angular-ui-router.js"
         ]
       }]
     },
     typescriptCompiled: {
       files: [{
         expand: true,
-        cwd: './target/ts-compiled/',
-        dest: './target/webapp/',
+        cwd: "./target/ts-compiled/",
+        dest: "./target/webapp/",
         src: [
-          '!.baseDir.js',
-          '**/*.js',
-          '**/*.js.map'
+          "!.baseDir.js",
+          "**/*.js",
+          "**/*.js.map"
         ]
       }]
     },
     typescriptSources: {
       files: [{
         expand: true,
-        cwd: './src/main/ts/',
-        dest: './target/webapp/',
+        cwd: "./src/main/ts/",
+        dest: "./target/webapp/",
         src: [
-          '**/*.ts'
+          "**/*.ts"
         ]
       }]
     },
     templatesHtml: {
       files: [{
         expand: true,
-        cwd: './src/main/templates/',
-        dest: './target/webapp/',
+        cwd: "./src/main/templates/",
+        dest: "./target/webapp/",
         src: [
-          '**/*.html'
+          "**/*.html"
         ]
       }]
     },
     stylesheets: {
       files: [{
         expand: true,
-        cwd: './target/scss-compiled/',
-        dest: './target/webapp/styles',
+        cwd: "./target/scss-compiled/",
+        dest: "./target/webapp/styles",
         src: [
-          '**/*.css'
+          "**/*.css"
         ]
       }]
     }

@@ -4,7 +4,8 @@
 System.config({
   defaultJSExtensions: true,
   map: {
-    "angular": "libs/angular.js"
+    "angular": "libs/angular.js",
+    "angular-ui-router": "libs/angular-ui-router.js"
   },
   meta: {
     "angular": {

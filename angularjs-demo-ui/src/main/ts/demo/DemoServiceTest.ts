@@ -12,8 +12,7 @@ describe("Test", () => {
 
     it("should load angular service", angular.mock.inject([DemoService.NAME, (demoService : DemoService) => {
         expect(demoService).not.toBeUndefined();
-        expect(demoService.getHello()).not.toBeUndefined();
-        console.debug("Service message: " + demoService.getHello());
+        expect(demoService.getHello("Janek")).not.toBeUndefined();
     }]));
 
 });

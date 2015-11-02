@@ -1,11 +1,15 @@
 import "angular";
+import "angular-ui-router";
 import DemoModule from "./demo/DemoModule";
 import MenuModule from "./menu/MenuModule";
 
-let module : angular.IModule = angular.module("app", [DemoModule.name, MenuModule.name]);
+let module : angular.IModule = angular.module("app", ["ui.router", DemoModule.name, MenuModule.name]);
 
 module.run([() => {
     console.timeEnd("APP_BOOT_TIME");
+}]);
+module.config(["$urlRouterProvider", ($urlRouterProvider : angular.ui.IUrlRouterProvider) => {
+    $urlRouterProvider.otherwise("/demo");
 }]);
 
 export default module;

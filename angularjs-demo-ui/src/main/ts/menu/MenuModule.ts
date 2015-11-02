@@ -1,5 +1,3 @@
-import app from "../app";
-import { IMenuController } from "./IMenuController";
 import MenuController from "./MenuController";
 import MenuDirective from "./MenuDirective";
 

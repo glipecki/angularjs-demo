@@ -1,14 +1,13 @@
-import "angular";
+import BaseDirective from "../utils/BaseDirective";
 
-export default class MenuDirective implements angular.IDirective {
+export default class MenuDirective extends BaseDirective {
+
     static NAME = "menu";
-    restrict = "E";
-    scope = true;
-    bindToController = {};
-    controller : string;
-    controllerAs = "vm";
+
     templateUrl = "menu/menu.tpl.html";
+
     constructor(controller : string) {
-        this.controller = controller;
+        super(controller);
     }
+
 }
