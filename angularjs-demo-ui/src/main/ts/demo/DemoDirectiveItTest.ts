@@ -23,7 +23,7 @@ describe("DemoDirective", () => {
         let expectedName = "Grześ";
         $httpBackend.whenPOST("/api/v1/hello", expectedName).respond("Hello Grześ!");
 
-        (<any>$rootScope).testUser = {
+        (<any> $rootScope).testUser = {
             username: expectedName
         };
 

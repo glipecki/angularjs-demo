@@ -14,9 +14,6 @@ export default class DemoDirective extends BaseDirective {
         </div>
     `;
 
-    /** Value binded from directive Scope */
-    private name : string;
-
     constructor(controllerName : string) {
         super(controllerName);
     }
