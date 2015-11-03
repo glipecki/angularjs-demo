@@ -10,12 +10,12 @@ export default class DemoDirective extends BaseDirective {
     template = `
         <div>
             <div>You've got mail!</div>
-            <div>Message: "{{ vm.getMessage(vm.user.username) }}"</div>
+            <div ng-show="vm.message">Message: "{{ vm.message }}"</div>
         </div>
     `;
 
-    /** Value binded from from Scope */
-    name : string;
+    /** Value binded from directive Scope */
+    private name : string;
 
     constructor(controllerName : string) {
         super(controllerName);

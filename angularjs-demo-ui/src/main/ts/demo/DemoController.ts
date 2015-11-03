@@ -1,13 +1,14 @@
-import { IDemoController } from "./IDemoController";
 import DemoService from "./DemoService";
 
-export default class DemoController implements IDemoController {
+export default class DemoController {
     static NAME = "DemoController";
-    private demoService : DemoService;
+    /** for view */
+    private message : string;
+    /** to bind from directive */
+    private user : any;
     constructor(demoService : DemoService) {
-        this.demoService = demoService;
-    }
-    getMessage(name : string) : string {
-        return this.demoService.getHello(name);
+        demoService.getHello(this.user.username).success((response : string) => {
+            this.message = response;
+        });
     }
 }

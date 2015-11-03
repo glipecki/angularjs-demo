@@ -21,3 +21,13 @@ PS> node ./node_modules/tsd/build/cli.js
 - cleaning in task aliases
 - functional tests
 - logging
+- karma watch task
+
+
+# Licese analysis:
+## node
+$ npm install nlf
+$ node node_modules/nlf/bin/nlf-cli.js
+## bower
+$ npm install bower-license
+$ node node_modules/bower-license/bin/bower-license

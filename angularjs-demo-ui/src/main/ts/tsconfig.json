@@ -26,7 +26,6 @@
         "demo/DemoModuleRouting.ts",
         "demo/DemoService.ts",
         "demo/DemoServiceTest.ts",
-        "demo/IDemoController.ts",
         "index.ts",
         "menu/IMenuController.ts",
         "menu/MenuController.ts",
