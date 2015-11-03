@@ -10,8 +10,8 @@ export let module : angular.IModule = angular.module(NAME, [DemoModuleRouting.na
 
 module.service(DemoService.NAME, ["$http", DemoService]);
 module.controller(DemoController.NAME, [DemoService.NAME, DemoController]);
-module.directive(DemoDirective.NAME, () => {
+module.directive(DemoDirective.NAME, [() => {
     return new DemoDirective(DemoController.NAME);
-});
+}]);
 
 export default module;

@@ -21,6 +21,7 @@
         "app.ts",
         "demo/DemoController.ts",
         "demo/DemoDirective.ts",
+        "demo/DemoDirectiveItTest.ts",
         "demo/DemoDirectiveTest.ts",
         "demo/DemoModule.ts",
         "demo/DemoModuleRouting.ts",

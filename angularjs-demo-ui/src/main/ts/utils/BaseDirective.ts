@@ -14,6 +14,13 @@ abstract class BaseDirective implements angular.IDirective {
     /** By default restrict to element */
     restrict = "E";
 
+    /** By default call controller init() on DOM linking. */
+    link = (scope : any, elem : any, attr : any, ctrl : any) => {
+        if (typeof ctrl.init === "function") {
+            ctrl.init();
+        }
+    }
+
     constructor(controllerName : string) {
         this.controller = controllerName;
     }

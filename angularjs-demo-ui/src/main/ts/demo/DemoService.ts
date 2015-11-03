@@ -7,6 +7,6 @@ export default class DemoService {
         this.$http = $http;
     }
     getHello(name : string) : angular.IHttpPromise<string> {
-        return this.$http.post("http://localhost:9000/api/v1/hello", name);
+        return this.$http.post("/api/v1/hello", name);
     }
 }

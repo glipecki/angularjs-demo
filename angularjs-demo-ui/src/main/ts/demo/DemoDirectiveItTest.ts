@@ -11,39 +11,27 @@ describe("DemoDirective", () => {
 
     let $compile: angular.ICompileService;
     let $rootScope: angular.IRootScopeService;
-    let demoControllerMock : any;
 
     beforeEach(angular.mock.module(DemoModule.name));
-    beforeEach(angular.mock.module(["$controllerProvider", function($controllerProvider : angular.IControllerProvider) {
-        $controllerProvider.register(DemoController.NAME, () => {
-            return demoControllerMock;
-        });
-    }]));
 
     beforeEach(inject(["$compile", "$rootScope", ($compile_: angular.ICompileService, $rootScope_: angular.IRootScopeService) => {
         $compile = $compile_;
         $rootScope = $rootScope_;
-        demoControllerMock = {};
     }]));
 
-    it("should evaluate directive with message from controller", angular.mock.inject([() => {
-        let expectedMessage = "Hello Krzyś!";
-        demoControllerMock.message = expectedMessage;
-
-        let element = $compile("<demo-message-box user=\"testUser\"></demo-message-box>")($rootScope);
-        $rootScope.$digest();
-
-        expect(element.html()).toContain(expectedMessage);
-    }]));
-
-    it("should bind user argument to controller", angular.mock.inject([() => {
+    it("should evaluate directive with remote service", angular.mock.inject(["$httpBackend", ($httpBackend : angular.IHttpBackendService) => {
         let expectedName = "Grześ";
-        (<any> $rootScope).testUser = expectedName;
+        $httpBackend.whenPOST("/api/v1/hello", expectedName).respond("Hello Grześ!");
+
+        (<any>$rootScope).testUser = {
+            username: expectedName
+        };
 
         let element = $compile("<demo-message-box user=\"testUser\"></demo-message-box>")($rootScope);
         $rootScope.$digest();
+        $httpBackend.flush();
 
-        expect(demoControllerMock.user).toEqual(expectedName);
+        expect(element.html()).toContain("Message: \"Hello Grześ!\"");
     }]));
 
     it("should do something", () => {
