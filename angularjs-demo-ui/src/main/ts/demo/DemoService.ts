@@ -12,5 +12,5 @@ export default class DemoService {
     getHello(name : string) : angular.IHttpPromise<string> {
         return this.$http.post("/api/v1/hello", name);
     }
-    
+
 }
