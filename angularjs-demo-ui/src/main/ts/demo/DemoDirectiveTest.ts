@@ -8,25 +8,29 @@ import DemoDirective from "./DemoDirective";
 
 describe("DemoDirective", () => {
 
-    let $compile : angular.ICompileService;
-    let $rootScope : angular.IRootScopeService;
+    let $compile: angular.ICompileService;
+    let $rootScope: angular.IRootScopeService;
 
     beforeEach(angular.mock.module(DemoModule.name));
 
-    beforeEach(inject(["$compile", "$rootScope", ($compile : angular.ICompileService, $rootScope : angular.IRootScopeService) => {
-        this.$compile = $compile;
-        this.$rootScope = $rootScope;
+    beforeEach(inject(["$compile", "$rootScope", ($compile_: angular.ICompileService, $rootScope_: angular.IRootScopeService) => {
+        $compile = $compile_;
+        $rootScope = $rootScope_;
     }]));
 
     it("should evaluate directive", angular.mock.inject([() => {
-        let element = this.$compile("<demo-message-box user=\"testUser\"></demo-message-box>")(this.$rootScope);
+        let element = $compile("<demo-message-box user=\"testUser\"></demo-message-box>")($rootScope);
 
-        (<any> this.$rootScope).testUser = {
+        (<any>$rootScope).testUser = {
             username: "Grześ"
         };
-        this.$rootScope.$digest();
+        $rootScope.$digest();
 
         expect(element.html()).toContain("Message: \"Hello Grześ!\"");
     }]));
+
+    it("should do something", () => {
+        expect(true).toBeTruthy();
+    });
 
 });

@@ -33,6 +33,13 @@ build:
         - 'test-phantom'
         - 'quality'
         - 'systemjs'
+buildAndRunTest:
+    description: "Build & package application than run tests"
+    tasks:
+        - "clean"
+        - "compile"
+        - "package"
+        - "test"
 devmode:
     description: 'Serve app in development mode'
     tasks:

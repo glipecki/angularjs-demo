@@ -13,7 +13,7 @@ module.exports = function(config) {
         ],
         reporters: [ "mocha" ],
         frameworks: [ "systemjs", "jasmine" ],
-        browsers: [ /* "PhantomJS" */ "Chrome" ],
+        browsers: [ /* "PhantomJS" , */ "Chrome" ],
         client: {
             captureConsole: true
         },
@@ -28,6 +28,7 @@ module.exports = function(config) {
             serveFiles: [
                 "./target/webapp/libs/**/*.js",
                 "./target/ts-compiled/**/*.js",
+                "./target/ts-compiled/**/*.js.map",
                 "./node_modules/angular-mocks/angular-mocks.js"
             ],
             config: {
