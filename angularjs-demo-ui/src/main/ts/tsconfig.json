@@ -23,6 +23,7 @@
         "demo/DemoDirective.ts",
         "demo/DemoDirectiveItTest.ts",
         "demo/DemoDirectiveTest.ts",
+        "demo/DemoInnerDirective.ts",
         "demo/DemoModule.ts",
         "demo/DemoModuleRouting.ts",
         "demo/DemoService.ts",

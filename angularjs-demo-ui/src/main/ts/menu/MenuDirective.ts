@@ -7,7 +7,8 @@ export default class MenuDirective extends BaseDirective {
     templateUrl = "menu/menu.tpl.html";
 
     constructor(controller : string) {
-        super(controller);
+        super();
+        this.controller = controller;
     }
 
 }

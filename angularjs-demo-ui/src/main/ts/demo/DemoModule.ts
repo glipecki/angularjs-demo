@@ -4,6 +4,7 @@ import DemoModuleRouting from "./DemoModuleRouting";
 import DemoService from "./DemoService";
 import DemoController from "./DemoController";
 import DemoDirective from "./DemoDirective";
+import DemoInnerDirective from "./DemoInnerDirective";
 
 export let NAME = "DemoModule";
 export let module : angular.IModule = angular.module(NAME, [DemoModuleRouting.name]);
@@ -13,5 +14,8 @@ module.controller(DemoController.NAME, [DemoService.NAME, DemoController]);
 module.directive(DemoDirective.NAME, [() => {
     return new DemoDirective(DemoController.NAME);
 }]);
+module.directive(DemoInnerDirective.NAME, [() => {
+    return new DemoInnerDirective();
+}])
 
 export default module;

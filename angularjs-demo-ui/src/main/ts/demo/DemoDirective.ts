@@ -11,11 +11,13 @@ export default class DemoDirective extends BaseDirective {
         <div>
             <div>You've got mail!</div>
             <div ng-show="vm.message">Message: "{{ vm.message }}"</div>
+            <demo-inner-box username="vm.user.username"></demo-inner-box>
         </div>
     `;
 
     constructor(controllerName : string) {
-        super(controllerName);
+        super();
+        this.controller = controllerName;
     }
 
 }
