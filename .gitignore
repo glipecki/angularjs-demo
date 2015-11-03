@@ -7,3 +7,5 @@ bower_components/
 .baseDir.ts
 *.tmp.txt
 .sass-cache
+*.iml
+.idea/
