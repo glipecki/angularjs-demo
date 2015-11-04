@@ -3,12 +3,7 @@ import "angular";
 export default class DemoService {
     static NAME : string = "DemoService";
 
-    private $http : angular.IHttpService;
-    private $q : angular.IQService;
-
-    constructor($http : angular.IHttpService, $q : angular.IQService) {
-        this.$http = $http;
-        this.$q = $q;
+    constructor(private $http : angular.IHttpService, private $q : angular.IQService) {
     }
 
     getHello(name : string) : angular.IPromise<string> {

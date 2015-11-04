@@ -7,10 +7,7 @@ export default class DemoController implements IDemoDirectiveController {
     view : IDemoDirectiveView;
     user : IUser;
 
-    private demoService : DemoService;
-
-    constructor(demoService : DemoService) {
-        this.demoService = demoService;
+    constructor(private demoService : DemoService) {
         this.view = {
             message: ""
         }
