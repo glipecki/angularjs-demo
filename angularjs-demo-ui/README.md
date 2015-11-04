@@ -31,3 +31,7 @@ $ node node_modules/nlf/bin/nlf-cli.js
 ## bower
 $ npm install bower-license
 $ node node_modules/bower-license/bin/bower-license
+
+# angular tricks
+var injector = $(document.body).injector();
+var someService = injector.get(‘someService’);

@@ -9,8 +9,9 @@ let module : angular.IModule = angular.module("app", ["ui.router", DemoModule.na
 module.run([() => {
     console.timeEnd("APP_BOOT_TIME");
 }]);
-module.config(["$urlRouterProvider", ($urlRouterProvider : angular.ui.IUrlRouterProvider) => {
+module.config(["$urlRouterProvider", "$compileProvider", ($urlRouterProvider : angular.ui.IUrlRouterProvider, $compileProvider : angular.ICompileProvider) => {
     $urlRouterProvider.otherwise("/demo");
+    $compileProvider.debugInfoEnabled(false);
 }]);
 
 export default module;
