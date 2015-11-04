@@ -2,7 +2,7 @@
   "name": "angularjs-demo-ui",
   "private": true,
   "dependencies": {
-    "angular-ui-router": "~0.2.15"
+    "angular-ui-router": "~0.2.15",
     "system.js": "~0.19.5",
     "angular": "1.4.7"
   }
