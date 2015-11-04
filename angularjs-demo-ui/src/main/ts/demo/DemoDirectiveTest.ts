@@ -5,7 +5,7 @@ import "angular";
 import "angular-mocks";
 import DemoModule from "./DemoModule";
 import DemoDirective from "./DemoDirective";
-import DemoController from "./DemoController";
+import DemoDirectiveController from "./DemoDirectiveController";
 
 describe("DemoDirective", () => {
 
@@ -15,7 +15,7 @@ describe("DemoDirective", () => {
 
     beforeEach(angular.mock.module(DemoModule.name));
     beforeEach(angular.mock.module(["$controllerProvider", function($controllerProvider : angular.IControllerProvider) {
-        $controllerProvider.register(DemoController.NAME, () => {
+        $controllerProvider.register(DemoDirectiveController.NAME, () => {
             return demoControllerMock;
         });
     }]));
@@ -28,7 +28,9 @@ describe("DemoDirective", () => {
 
     it("should evaluate directive with message from controller", angular.mock.inject([() => {
         let expectedMessage = "Hello Krzyś!";
-        demoControllerMock.message = expectedMessage;
+        demoControllerMock.view = {
+            message: expectedMessage
+        };
 
         let element = $compile("<demo-message-box user=\"testUser\"></demo-message-box>")($rootScope);
         $rootScope.$digest();

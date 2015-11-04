@@ -5,7 +5,6 @@ import "angular";
 import "angular-mocks";
 import DemoModule from "./DemoModule";
 import DemoDirective from "./DemoDirective";
-import DemoController from "./DemoController";
 
 describe("DemoDirective", () => {
 

@@ -19,8 +19,8 @@
     ],
     "files": [
         "app.ts",
-        "demo/DemoController.ts",
         "demo/DemoDirective.ts",
+        "demo/DemoDirectiveController.ts",
         "demo/DemoDirectiveItTest.ts",
         "demo/DemoDirectiveTest.ts",
         "demo/DemoInnerDirective.ts",
