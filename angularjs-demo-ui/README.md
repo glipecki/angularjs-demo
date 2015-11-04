@@ -19,10 +19,19 @@ PS> node ./node_modules/tsd/build/cli.js
 - maven assebmly
 
 - cleaning in task aliases
-- functional tests
 - logging
 - karma watch task
 
+- functional tests ?
+-- build
+--- build app (jar/war with webapp-ui)
+--- run with functionalTests profile
+--- run protractor against :8080
+--- ?
+-- devmode
+--- build app (jar/war)
+--- run devmode
+--- run protractor against :9000
 
 # Licese analysis:
 ## node
@@ -35,3 +44,7 @@ $ node node_modules/bower-license/bin/bower-license
 # angular tricks
 var injector = $(document.body).injector();
 var someService = injector.get(‘someService’);
+
+# protractor
+$ node_modules/protractor/bin/webdriver-manager update
+$ node_modules/protractor/bin/protractor protractor.js
