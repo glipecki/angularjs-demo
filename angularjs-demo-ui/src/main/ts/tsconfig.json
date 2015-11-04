@@ -19,6 +19,14 @@
     ],
     "files": [
         "app.ts",
+        "async1/Async1Controller.ts",
+        "async1/Async1Module.ts",
+        "async1/Async1Routing.ts",
+        "async2/Async2Controller.ts",
+        "async2/Async2Module.ts",
+        "async2/Async2Routing.ts",
+        "asyncApp.ts",
+        "asyncIndex.ts",
         "demo/DemoDirective.ts",
         "demo/DemoDirectiveController.ts",
         "demo/DemoDirectiveItTest.ts",
@@ -45,6 +53,7 @@
         "../../../typings/angularjs/angular.d.ts",
         "../../../typings/jasmine/jasmine.d.ts",
         "../../../typings/jquery/jquery.d.ts",
+        "../../../typings/oclazyload/oclazyload.d.ts",
         "../../../typings/selenium-webdriver/selenium-webdriver.d.ts",
         "../../../typings/systemjs/systemjs.d.ts",
         "../../../typings/tsd.d.ts"

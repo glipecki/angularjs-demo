@@ -5,7 +5,8 @@ System.config({
   defaultJSExtensions: true,
   map: {
     "angular": "libs/angular.js",
-    "angular-ui-router": "libs/angular-ui-router.js"
+    "angular-ui-router": "libs/angular-ui-router.js",
+    "oclazyload": "libs/ocLazyLoad.js"
   },
   meta: {
     "angular": {

@@ -8,7 +8,8 @@ module.exports = function (grunt, options) {
         src: [
           "bower_components/angular/angular.js",
           "bower_components/system.js/dist/system.js",
-          "bower_components/angular-ui-router/release/angular-ui-router.js"
+          "bower_components/angular-ui-router/release/angular-ui-router.js",
+          "bower_components/oclazyload/dist/ocLazyLoad.js"
         ]
       }]
     },
