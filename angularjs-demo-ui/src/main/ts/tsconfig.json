@@ -44,8 +44,7 @@
         "../../../typings/oclazyload/oclazyload.d.ts",
         "../../../typings/selenium-webdriver/selenium-webdriver.d.ts",
         "../../../typings/systemjs/systemjs.d.ts",
-        "../../../typings/tsd.d.ts",
-        "../../../typings/ui-router-extras/ui-router-extras.d.ts"
+        "../../../typings/tsd.d.ts"
     ],
     "formatCodeOptions": {
         "indentSize": 4,
