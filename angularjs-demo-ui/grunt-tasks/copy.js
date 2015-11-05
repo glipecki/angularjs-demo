@@ -9,7 +9,8 @@ module.exports = function (grunt, options) {
           "bower_components/angular/angular.js",
           "bower_components/system.js/dist/system.js",
           "bower_components/angular-ui-router/release/angular-ui-router.js",
-          "bower_components/oclazyload/dist/ocLazyLoad.js"
+          "bower_components/oclazyload/dist/ocLazyLoad.js",
+          "bower_components/ui-router-extras/release/ct-ui-router-extras.js"
         ]
       }]
     },
@@ -44,7 +45,7 @@ module.exports = function (grunt, options) {
           "**/*.html"
         ]
       }]
-    },
+    }
     stylesheets: {
       files: [{
         expand: true,
