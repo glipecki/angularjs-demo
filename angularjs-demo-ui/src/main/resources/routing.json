@@ -1,8 +1,0 @@
-[
-  {
-    "stateName": "login",
-    "urlPrefix": "/login",
-    "type": "systemjs",
-    "module": "login"
-  }
-]
