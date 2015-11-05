@@ -1,6 +1,6 @@
 import "angular";
 import "angular-ui-router";
-import 'oclazyload';
+import "oclazyload";
 
 let module = angular.module("async1.routing", ["ui.router", "oc.lazyLoad"])
 module.config(["$stateProvider", ($stateProvider : angular.ui.IStateProvider) => {

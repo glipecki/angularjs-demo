@@ -22,6 +22,7 @@
         "async1/Async1Controller.ts",
         "async1/Async1Module.ts",
         "async1/Async1Routing.ts",
+        "async1/IAsync1Controller.ts",
         "async2/Async2Controller.ts",
         "async2/Async2Module.ts",
         "async2/Async2Routing.ts",
