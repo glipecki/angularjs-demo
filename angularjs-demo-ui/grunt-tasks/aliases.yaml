@@ -59,6 +59,9 @@ watch-after–templates:
     tasks:
         - 'newer:copy:templatesHtml'
         - 'replace:devmode'
+watch-after-resources:
+    tasks:
+        - "newer:copy:appResources"
 watch-after–stylesheets:
     tasks:
         - 'compass'

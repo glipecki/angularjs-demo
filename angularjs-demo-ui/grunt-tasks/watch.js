@@ -12,6 +12,10 @@ module.exports = function (grunt, options) {
         files: [ './src/main/templates/**/*.html' ],
         tasks: [ 'watch-after–templates' ]
     },
+    appResources: {
+        files: [ "./src/main/resources/**/*" ],
+        tasks: [ "watch-after-resources" ]
+    },
     stylesheets: {
         files: [ './src/main/scss/**/*.scss' ],
         tasks: [ 'watch-after–stylesheets' ]

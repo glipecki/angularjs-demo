@@ -45,7 +45,17 @@ module.exports = function (grunt, options) {
           "**/*.html"
         ]
       }]
-    }
+    },
+    appResources: {
+        files: [{
+            expand: true,
+            cwd: "./src/main/resources/",
+            dest: "./target/webapp/",
+            src: [
+                "**/*"
+            ]
+        }]
+    },
     stylesheets: {
       files: [{
         expand: true,
