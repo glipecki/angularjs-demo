@@ -1,5 +1,7 @@
-import { ITasksController } from "./ITasksController";
+import { ITasksController, NAME as ControllerName } from "./ITasksController";
 
 export default class TasksController implements ITasksController {
+
+    demoMessage = ControllerName;
 
 }

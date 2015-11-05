@@ -18,6 +18,9 @@
         "../../../typings/**/*.d.ts"
     ],
     "files": [
+        "about/AboutController.ts",
+        "about/AboutModule.ts",
+        "about/IAboutController.ts",
         "app.ts",
         "dashboard/DashboardController.ts",
         "dashboard/DashboardModule.ts",
@@ -25,6 +28,7 @@
         "dashboard/IDashboardController.ts",
         "index.ts",
         "lazy/LazyModule.ts",
+        "lazy/LazyModulesRouting.ts",
         "lazy/LazySystemService.ts",
         "login/ILoginController.ts",
         "login/LoginController.ts",

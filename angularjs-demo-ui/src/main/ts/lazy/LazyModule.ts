@@ -2,6 +2,8 @@ import "angular";
 import "angular-ui-router-extras";
 import "oclazyload";
 
+import routing from "./LazyModulesRouting";
+
 let module = angular.module("lazy.futureState", ["ct.ui.router.extras"]);
 
 let capitalize = (what : string) : string => {
@@ -33,13 +35,16 @@ module.config(["$futureStateProvider", ($futureStateProvider : any) => {
 
         return moduleDeffer.promise;
     }]);
-    $futureStateProvider.addResolve(["$http", ($http : ng.IHttpService) => {
-        $http.get("routing.json").then((resp : any) => {
-            resp.data.forEach((futureRouting : any) => {
-                $futureStateProvider.futureState(futureRouting);
-            });
-        });
-    }]);
+    // $futureStateProvider.addResolve(["$http", ($http : ng.IHttpService) => {
+    //     $http.get("routing.json").then((resp : any) => {
+    //         resp.data.forEach((futureRouting : any) => {
+    //             $futureStateProvider.futureState(futureRouting);
+    //         });
+    //     });
+    // }]);
+    routing.forEach((futureRouting : any) => {
+        $futureStateProvider.futureState(futureRouting);
+    });
 }]);
 
 export default module;

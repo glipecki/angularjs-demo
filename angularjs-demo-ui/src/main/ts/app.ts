@@ -6,6 +6,7 @@ import LazyModule from "./lazy/LazyModule";
 // import LoginRouting from "./login/LoginRouting";
 import TasksRouting from "./tasks/TasksRouting";
 import DashboardRouting from "./dashboard/DashboardRouting";
+import AboutModule from "./about/AboutModule";
 
 let module : angular.IModule = angular.module("app", [
     "ui.router",
@@ -13,7 +14,8 @@ let module : angular.IModule = angular.module("app", [
     LazyModule.name,
     // LoginRouting.name,
     TasksRouting.name,
-    DashboardRouting.name
+    DashboardRouting.name,
+    AboutModule.name
   ]
 );
 

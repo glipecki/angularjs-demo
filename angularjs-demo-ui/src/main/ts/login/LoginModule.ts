@@ -8,9 +8,9 @@ module.config(["$stateProvider", ($stateProvider : angular.ui.IStateProvider) =>
     // LazySystemService.registerLazyModule($stateProvider, "login", ControllerName);
     $stateProvider.state("/login", {
         url: "/login",
-        template: `
-            lazy login?
-        `
+        templateUrl: "login/view.tpl.html",
+        controllerAs: "vm",
+        controller: ControllerName
     });
     $stateProvider.state("/login/new", {
         url: "/login/new",
