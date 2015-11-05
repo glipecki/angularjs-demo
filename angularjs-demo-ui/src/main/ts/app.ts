@@ -15,22 +15,13 @@ let module : angular.IModule = angular.module("app", [
   ]
 );
 
-module.service('lazySystem', ["$ocLazyLoad", ($ocLazyLoad : oc.ILazyLoad) => {
-    return {
-        load: (src : string, key : string) => {
-          return System.import(src).then((loadedFile : string) => {
-            return $ocLazyLoad.load(loadedFile[key || 'default']);
-          });
-        }
-    }
-}]);
 module.config(["$urlRouterProvider", "$compileProvider", "$ocLazyLoadProvider",(
     $urlRouterProvider : angular.ui.IUrlRouterProvider,
     $compileProvider : angular.ICompileProvider,
     $ocLazyLoadProvider : oc.ILazyLoadProvider) => {
         $urlRouterProvider.otherwise("/dashboard");
         $compileProvider.debugInfoEnabled(false);
-        $ocLazyLoadProvider.config({
+    $ocLazyLoadProvider.config({
             debug: true
         });
 }]);

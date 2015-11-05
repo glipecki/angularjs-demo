@@ -24,6 +24,7 @@
         "dashboard/DashboardRouting.ts",
         "dashboard/IDashboardController.ts",
         "index.ts",
+        "lazy/LazySystemService.ts",
         "login/ILoginController.ts",
         "login/LoginController.ts",
         "login/LoginModule.ts",
