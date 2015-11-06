@@ -38,5 +38,4 @@ module.run([() => {
     console.timeEnd("APP_BOOT_TIME");
 }]);
 
-
 export default module;

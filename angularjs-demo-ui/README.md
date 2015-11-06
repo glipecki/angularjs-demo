@@ -42,8 +42,7 @@ $ npm install bower-license
 $ node node_modules/bower-license/bin/bower-license
 
 # angular tricks
-var injector = $(document.body).injector();
-var someService = injector.get(‘someService’);
+angular.element(document).injector().get("IAuthService").getCurrentUser();
 
 # protractor
 $ node_modules/protractor/bin/webdriver-manager update

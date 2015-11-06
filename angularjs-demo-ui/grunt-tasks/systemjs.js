@@ -12,6 +12,14 @@ module.exports = function (grunt, options) {
                 {
                     "src": "./target/webapp/index.js",
                     "dest": "./target/webapp/bundle.js"
+                },
+                {
+                    "src": "./target/webapp/login/LoginModule.js",
+                    "dest": "./target/webapp/bundle-login.js"
+                },
+                {
+                    "src": "./target/webapp/tasks/TasksModule.js",
+                    "dest": "./target/webapp/bundle-tasks.js"
                 }
             ]
         }
