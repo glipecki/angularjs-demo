@@ -1,9 +1,10 @@
 import ILogger from "./ILogger";
-import ConsoleLogger from "./ConsoleLogger";
+import DefaultLogger from "./DefaultLogger";
+import ConsoleLogAppender from "./ConsoleLogAppender";
 
 abstract class LoggerFactory {
     static getLogger() : ILogger {
-        return new ConsoleLogger();
+        return new DefaultLogger(new ConsoleLogAppender());
     }
 }
 
