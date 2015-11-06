@@ -8,6 +8,8 @@ import TasksRouting from "./tasks/TasksRouting";
 import DashboardRouting from "./dashboard/DashboardRouting";
 import AboutModule from "./about/AboutModule";
 
+import LoggerFactory from "./logger/LoggerFactory";
+
 let module : angular.IModule = angular.module("app", [
     "ui.router",
     "oc.lazyLoad",
