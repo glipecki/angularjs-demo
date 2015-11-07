@@ -1,19 +1,25 @@
 import "angular";
 
-import LazySystemService from "../lazy/LazySystemService";
+import LazyModule from "../lazy/LazyModule";
+import { ILazyStateProvider } from "../lazy/ILazyStateProvider";
 import { NAME as ControllerName } from "./ITasksController";
 
-let module = angular.module("tasks.routing", ["ui.router"])
+let module = angular.module("tasks.routing", [LazyModule.name])
 
-module.config(["$stateProvider", ($stateProvider : angular.ui.IStateProvider) => {
-    $stateProvider.state("/tasks", {
+module.config(["lazyStateProvider", (lazyStateProvider : ILazyStateProvider) => {
+    lazyStateProvider.lazyState("/tasks", {
         url: "/tasks",
         templateUrl: "tasks/view.tpl.html",
         controllerAs: "vm",
+        controller: ControllerName,
+        module: "tasks/TasksModule",
         resolve: {
-            loadAsync: LazySystemService.asyncLoadModule("tasks/TasksModule")
-        },
-        controller: ControllerName
+            user: () => {
+                return {
+                    name: "Janek"
+                }
+            }
+        }
     });
 }]);
 

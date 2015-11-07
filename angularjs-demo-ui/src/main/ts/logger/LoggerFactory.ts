@@ -3,8 +3,8 @@ import DefaultLogger from "./DefaultLogger";
 import ConsoleLogAppender from "./ConsoleLogAppender";
 
 abstract class LoggerFactory {
-    static getLogger() : ILogger {
-        return new DefaultLogger(new ConsoleLogAppender());
+    static getLogger(name: string) : ILogger {
+        return new DefaultLogger(name, new ConsoleLogAppender());
     }
 }
 

@@ -1,18 +1,43 @@
 import ILogger from "./ILogger";
 import ILogAppender from "./ILogAppender";
+import "moment";
+
+enum LogLevel {
+    ERROR,
+    WARN,
+    INFO,
+    DEBUG,
+    TRACE
+}
 
 export default class DefaultLogger implements ILogger {
 
-    constructor(private logAppender: ILogAppender) {
+    constructor(private name: string, private logAppender: ILogAppender) {
+    }
+
+    error(format: string, ...params: any[]): void {
+        this.logAppender.log(this.buildMessage(format, LogLevel.ERROR, params));
+    }
+
+    warn(format: string, ...params: any[]): void {
+        this.logAppender.log(this.buildMessage(format, LogLevel.WARN, params));
     }
 
     info(format: string, ...params: any[]): void {
-        this.logAppender.info(this.buildMessage(format, params));
+        this.logAppender.log(this.buildMessage(format, LogLevel.INFO, params));
     }
 
-    private buildMessage(format: string, ...params: any[]): string {
+    debug(format: string, ...params: any[]): void {
+        this.logAppender.log(this.buildMessage(format, LogLevel.DEBUG, params));
+    }
+
+    trace(format: string, ...params: any[]): void {
+        this.logAppender.log(this.buildMessage(format, LogLevel.TRACE, params));
+    }
+
+    private buildMessage(format: string, level: LogLevel, ...params: any[]): string {
         let restFormat = format;
-        let msg = "";
+        let msg = moment().format() + " [" + LogLevel[level] + "][" + this.name + "] ";
         while (restFormat.indexOf("{}") > -1) {
             if (params.length < 1) {
                 throw "Format requires more parameters than provided!";

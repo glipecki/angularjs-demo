@@ -28,9 +28,9 @@ module.config(["$urlRouterProvider", "$compileProvider", "$ocLazyLoadProvider", 
     ) => {
         $urlRouterProvider.otherwise("/dashboard");
         $compileProvider.debugInfoEnabled(false);
-        $ocLazyLoadProvider.config({
-            debug: true
-        });
+        // $ocLazyLoadProvider.config({
+        //     debug: true
+        // });
     }
 ]);
 module.run([() => {

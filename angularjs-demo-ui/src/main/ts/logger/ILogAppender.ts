@@ -1,5 +1,5 @@
 interface ILogAppender {
-    info(message : string) : void;
+    log(message : string) : void;
 }
 
 export default ILogAppender;
