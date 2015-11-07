@@ -1,3 +1,14 @@
+# Sample app
+## Modules
+- about - statically linked module
+- auth - common module for authentication and authorization
+- dashboard - lazy loaded module via statically linked routing definition (standard $stateProvider)
+- lazy - utils and providers for lazy loading
+- login - lazy loaded module via future states (exact routing lazy loaded on module load)
+- tasks - lazy loaded module via statically linked routing definition (custom lazyStateProvider)
+- util - common utils
+- logger - common module with logging dependencies
+
 # How to run grunt
 
 on Windows
