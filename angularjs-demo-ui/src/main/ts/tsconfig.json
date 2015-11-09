@@ -18,7 +18,6 @@
         "../../../typings/**/*.d.ts"
     ],
     "files": [
-        "SimpleFunTest.ts",
         "about/AboutController.ts",
         "about/AboutModule.ts",
         "about/IAboutController.ts",
@@ -50,6 +49,7 @@
         "login/LoginController.ts",
         "login/LoginModule.ts",
         "login/LoginRouting.ts",
+        "SimpleFunTest.ts",
         "systemjs-config.ts",
         "tasks/ITasksController.ts",
         "tasks/TasksController.ts",
@@ -62,8 +62,6 @@
         "../../../typings/angularjs/angular.d.ts",
         "../../../typings/jasmine/jasmine.d.ts",
         "../../../typings/jquery/jquery.d.ts",
-        "../../../typings/moment/moment-node.d.ts",
-        "../../../typings/moment/moment.d.ts",
         "../../../typings/oclazyload/oclazyload.d.ts",
         "../../../typings/selenium-webdriver/selenium-webdriver.d.ts",
         "../../../typings/systemjs/systemjs.d.ts",

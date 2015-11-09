@@ -58,3 +58,13 @@ angular.element(document).injector().get("IAuthService").getCurrentUser();
 # protractor
 $ node_modules/protractor/bin/webdriver-manager update
 $ node_modules/protractor/bin/protractor protractor.js
+
+# snippets
+## auth state
+  $rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams){
+        if (toState.data.authenticate && !Auth.isLoggedIn()){
+            // User isn’t authenticated
+            $state.transitionTo("login");
+            event.preventDefault();
+        }
+    });
